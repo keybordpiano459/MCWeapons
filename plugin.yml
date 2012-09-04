@@ -1,0 +1,24 @@
+name: MCWeapons
+main: me.KeybordPiano459.MCWeapons.MCWeapons
+version: 1.0
+description: Now with weapons...
+author: KeybordPiano459
+commands:
+  mcweapons:
+    description: View info about MCWeapons
+permissions:
+  mcweapons.*:
+    description: Access to all MCWeapons
+    default: op
+  mcweapons.firecharge:
+    description: Access to make fireballs
+    default: op
+  mcweapons.snowballgrenade:
+    description: Access to have snowball grenades
+    default: op
+  mcweapons.explosivearrow:
+    description: Access to explosive arrows
+    default: op
+  mcweapons.lightningstick:
+    description: Access to use lightning sticks
+    default: op
