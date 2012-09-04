@@ -3,7 +3,6 @@ package me.KeybordPiano459.MCWeapons;
 import java.io.IOException;
 
 import me.KeybordPiano459.MCWeapons.events.ExplosiveArrow;
-import me.KeybordPiano459.MCWeapons.events.JoinMessage;
 import me.KeybordPiano459.MCWeapons.events.LightningStick;
 import me.KeybordPiano459.MCWeapons.events.PlayerDeath;
 import me.KeybordPiano459.MCWeapons.events.SnowballGrenade;
@@ -21,7 +20,6 @@ public class MCWeapons extends JavaPlugin {
 		getLogger().info("MCWeapons v1.0 has been enabled!");
 		
 		registerEvents();
-		//getCommands();
 		
 		try {
 		    Metrics metrics = new Metrics(this);
@@ -43,20 +41,9 @@ public class MCWeapons extends JavaPlugin {
 		} else {
 			getLogger().info("Explosive deaths are disabled.");
 		}
-		
-		if (getConfig().getBoolean("join-message")) {
-			pm.registerEvents(new JoinMessage(), this);
-		}
 		getLogger().info("Weapons have been activated!");
 	}
-	/*
-	public void getCommands() {
-		getCommand("mcweapons", new CommandMCWeapons());
-	}
-	public void getCommand(String command, CommandExecutor commandexecutor) {
-		Bukkit.getServer().getPluginCommand(command).setExecutor(commandexecutor);
-	}
-	*/
+	
 	public void onDisable() {
 		getLogger().info("MCWeapons v1.0 has been disabled.");
 	}
