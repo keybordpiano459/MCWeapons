@@ -20,8 +20,6 @@ public class AttackArrow implements Listener {
         	} else {
         		//Normal stuff
         	}
-        } else {
-        	//Normal stuff
         }
     }
 }

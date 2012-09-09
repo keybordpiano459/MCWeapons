@@ -47,7 +47,7 @@ public class ThrowableArrow implements Listener {
         			}
         		}
         	} else {
-        	//You don't have permission
+        	//You don't have permissions
         	}
         }
 	}
