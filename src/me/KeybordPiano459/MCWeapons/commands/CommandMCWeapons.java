@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 
 public class CommandMCWeapons implements CommandExecutor {
 	  public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-		  Player player = (Player) sender;
 		  Logger log = Logger.getLogger("Minecraft");
 		  if (cmd.getName().equalsIgnoreCase("mcweapons")) {
 			  if (sender instanceof Player) {
+				  Player player = (Player) sender;
 				  if (args.length == 0) {
-					  player.sendMessage(ChatColor.DARK_GREEN + "MCWeapons v1.0");
+					  player.sendMessage(ChatColor.DARK_GREEN + "MCWeapons v1.0.5");
 					  player.sendMessage("");
 					  player.sendMessage(ChatColor.RED + "Developed by " + ChatColor.DARK_RED + "KeybordPiano459");
 					  player.sendMessage("");
@@ -23,12 +23,13 @@ public class CommandMCWeapons implements CommandExecutor {
 					  player.sendMessage(ChatColor.DARK_AQUA + "  http://dev.bukkit.org/server-mods/mcweapons/");
 					  player.sendMessage(ChatColor.DARK_AQUA + "  http://mcstats.org/plugin/mcweapons/");
 					  player.sendMessage(ChatColor.DARK_AQUA + "  https://github.com/keybordpiano459/MCWeapons/");
+					  log.info("[MCWeapons] " + player.getDisplayName() + " has used /mcweapons");
 				  } else {
 					  player.sendMessage("[" + ChatColor.DARK_GREEN + "MCWeapons" + ChatColor.RESET + "] " + ChatColor.RED + "Incorrect usage! Type /MCWeapons");
 				  }
 			  } else {
 				  if (args.length == 0) {
-					  log.info("MCWeapons v1.0");
+					  log.info("MCWeapons v1.0.5");
 					  log.info("");
 					  log.info("Developed by KeybordPiano459");
 					  log.info("");
@@ -40,7 +41,8 @@ public class CommandMCWeapons implements CommandExecutor {
 					  log.info("[MCWeapons] Incorrect usage! Type /MCWeapons");
 				  }
 			  }
+			  return true;
 		  }
-		  return true;
+		  return false;
 	  }
 }

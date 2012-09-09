@@ -1,3 +1,4 @@
 # MCWeapons Config | By KeybordPiano459
 
-explosive-deaths: true
+explosive-deaths: false
+auto-updater: true

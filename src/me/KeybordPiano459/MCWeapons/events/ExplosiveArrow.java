@@ -12,6 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
 
 public class ExplosiveArrow implements Listener {
+
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onArrowShot(ProjectileHitEvent event) {
 		if (event.getEntity() instanceof Arrow) {
