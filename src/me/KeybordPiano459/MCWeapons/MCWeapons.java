@@ -11,6 +11,7 @@ import me.KeybordPiano459.MCWeapons.events.ExplosiveArrow;
 import me.KeybordPiano459.MCWeapons.events.LightningStick;
 import me.KeybordPiano459.MCWeapons.events.PlayerDeath;
 import me.KeybordPiano459.MCWeapons.events.SnowballGrenade;
+import me.KeybordPiano459.MCWeapons.events.ThrowableArrow;
 import me.KeybordPiano459.MCWeapons.events.ThrowableFireCharge;
 import me.KeybordPiano459.MCWeapons.util.Metrics;
 
@@ -25,7 +26,7 @@ public class MCWeapons extends JavaPlugin {
 	public static MCWeapons plugin;
 	
 	public void onEnable() {
-		getLogger().info("MCWeapons v1.0.5 has been enabled!");
+		getLogger().info("MCWeapons v1.1 has been enabled!");
 		
 		autoUpdater();
 		registerEvents();
@@ -43,7 +44,7 @@ public class MCWeapons extends JavaPlugin {
 	}
 	
 	public void onDisable() {
-		getLogger().info("MCWeapons v1.0.5 has been disabled.");
+		getLogger().info("MCWeapons v1.1 has been disabled.");
 	}
 	
 	public void getCommands() {
@@ -61,6 +62,7 @@ public class MCWeapons extends JavaPlugin {
 		pm.registerEvents(new ExplosiveArrow(), this);
 		pm.registerEvents(new LightningStick(), this);
 		//pm.registerEvents(new BlindingEggs(), this);
+		pm.registerEvents(new ThrowableArrow(), this);
 		if (getConfig().getBoolean("explosive-deaths")) {
 			pm.registerEvents(new PlayerDeath(), this);
 		} else {
